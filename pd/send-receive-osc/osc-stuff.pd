@@ -1,0 +1,18 @@
+#N canvas 1152 122 729 793 12;
+#X obj 72 46 netreceive -u -b 5555;
+#X obj 90 79 oscparse;
+#X obj 90 139 route adresa;
+#X floatatom 99 184 5 0 0 0 - - - 0;
+#X listbox 193 106 20 0 0 0 - - - 0;
+#X obj 72 314 netsend -u -b;
+#X msg 99 282 connect localhost 7777;
+#X obj 99 250 loadbang;
+#X obj 90 110 list trim;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 2 0;

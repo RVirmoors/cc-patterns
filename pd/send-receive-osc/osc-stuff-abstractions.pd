@@ -1,0 +1,13 @@
+#N canvas 947 278 812 615 12;
+#X obj 65 75 route adresa;
+#X floatatom 65 109 5 0 0 0 - - - 0;
+#X obj 65 40 udpreceive 5556;
+#X obj 63 209 oscformat adresa;
+#X floatatom 63 180 5 0 0 0 - - - 0;
+#X text 190 210 Max: [prepend /adresa];
+#X text 187 76 Max: [route /adresa];
+#X obj 63 244 udpsend 7779;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 7 0;
+#X connect 4 0 3 0;
