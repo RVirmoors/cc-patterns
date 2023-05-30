@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 0,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 118.0, 261.0, 640.0, 480.0 ],
+		"rect" : [ 150.0, 261.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -42,12 +42,12 @@
 				"box" : 				{
 					"fontsize" : 19.083339024125149,
 					"id" : "obj-2",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 42.166666666666515, 40.304147465437744, 163.0, 70.0 ],
-					"text" : "CC Tips #1\nRandom between 2 values"
+					"patching_rect" : [ 42.166666666666515, 40.304147465437744, 163.0, 50.0 ],
+					"text" : "Random between 2 values"
 				}
 
 			}
