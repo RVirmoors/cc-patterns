@@ -10,6 +10,7 @@ Send accelerometer/gyroscope/temperature data via OSC to your computer/device.
 Libraries:
 Adafruit MPU6050
 WiFi
+https://github.com/CNMAT/OSC
 
 Settings:
 Tools -> Board -> NodeMCU 1.0 (ESP-12 E Module) // if not present, install esp8266 board
