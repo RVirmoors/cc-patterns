@@ -9,14 +9,13 @@ Examples:
 Send data via OSC to Arduino ESP8266.
 
 Libraries:
-WiFi
-https://github.com/CNMAT/OSC
+- WiFi
+- https://github.com/CNMAT/OSC (requires Arduino 1.x)
 
 
 Settings:
+```
 Tools -> Board -> NodeMCU 1.0 (ESP-12 E Module) // if not present, install esp8266 board
                -> Upload speed: 115200
                -> CPU: 80 MHz
-               
-
-## author
+```
