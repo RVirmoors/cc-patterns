@@ -1,6 +1,6 @@
 # Color Picker Tool (Processing)
 
-Allows one to pick the desired colours from an image and create a list in the console\
+Allows one to pick the desired colours from an image and create a list in the console.
 
 ## when to use
 
