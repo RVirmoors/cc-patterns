@@ -8,3 +8,7 @@
 
 ## libraries used
 - groq
+
+
+see also:
+- https://github.com/groq/groq-api-cookbook
