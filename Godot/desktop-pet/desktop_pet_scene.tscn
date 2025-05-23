@@ -1,0 +1,142 @@
+[gd_scene load_steps=21 format=3 uid="uid://2kqqetr3qevo"]
+
+[ext_resource type="Script" uid="uid://bqy65u7xm5grs" path="res://desktop_pet_scene.gd" id="1_8am1i"]
+[ext_resource type="Script" uid="uid://dfljei86fpopi" path="res://character.gd" id="2_dy5kc"]
+[ext_resource type="Texture2D" uid="uid://i8p1tg22nkh4" path="res://assets/player_animations-Sheet.png" id="3_5wcyx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy5kc"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wcyx"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b32ob"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7s5i"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wse5e"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bktk"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8b2q"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ksq4"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auwh4"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4ux8"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elnf4"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufnjy"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8xhr"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn1kw"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vek4h"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esclf"]
+atlas = ExtResource("3_5wcyx")
+region = Rect2(224, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b32ob"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy5kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wcyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b32ob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7s5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wse5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bktk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8b2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ksq4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auwh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4ux8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elnf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufnjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8xhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vn1kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vek4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esclf")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[node name="DesktopPetScene" type="Node2D"]
+script = ExtResource("1_8am1i")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_dy5kc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(50, 50)
+scale = Vector2(3.125, 3.125)
+sprite_frames = SubResource("SpriteFrames_b32ob")
+animation = &"idle"
