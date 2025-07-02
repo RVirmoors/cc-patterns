@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE08075F2294FFB1008EAD18 /* TDSlamtec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E23329E11DF092C90002B4FE /* TDSlamtec.cpp */; };
+		DE08076022950467008EAD18 /* rplidar_driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE0806792294FD8F008EAD18 /* rplidar_driver.cpp */; settings = {COMPILER_FLAGS = "-Wno-c++11-narrowing"; }; };
+		DE08076122951356008EAD18 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE08066F2294FD8F008EAD18 /* thread.cpp */; };
+		DE08076222951385008EAD18 /* net_socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE08067E2294FD8F008EAD18 /* net_socket.cpp */; };
+		DE08076322951388008EAD18 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE08067F2294FD8F008EAD18 /* timer.cpp */; };
+		DE0807642295138A008EAD18 /* net_serial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE0806812294FD8F008EAD18 /* net_serial.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE08060D2294FD8F008EAD18 /* CP210x_Windows_Drivers.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = CP210x_Windows_Drivers.zip; sourceTree = "<group>"; };
+		DE08060E2294FD8F008EAD18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE0806102294FD8F008EAD18 /* ReleaseNote.v1.8.1.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNote.v1.8.1.md; sourceTree = "<group>"; };
+		DE0806112294FD8F008EAD18 /* ReleaseNote.v1.9.0.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNote.v1.9.0.md; sourceTree = "<group>"; };
+		DE0806122294FD8F008EAD18 /* ReleaseNote.v1.8.0.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNote.v1.8.0.md; sourceTree = "<group>"; };
+		DE0806132294FD8F008EAD18 /* ReleaseNote.v1.9.1.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNote.v1.9.1.md; sourceTree = "<group>"; };
+		DE0806142294FD8F008EAD18 /* ReleaseNote.v1.11.0.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNote.v1.11.0.md; sourceTree = "<group>"; };
+		DE0806152294FD8F008EAD18 /* ReleaseNote.v1.10.0.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNote.v1.10.0.md; sourceTree = "<group>"; };
+		DE0806162294FD8F008EAD18 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DE0806172294FD8F008EAD18 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DE0806532294FD8F008EAD18 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		DE0806542294FD8F008EAD18 /* mak_def.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = mak_def.inc; sourceTree = "<group>"; };
+		DE0806552294FD8F008EAD18 /* mak_common.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = mak_common.inc; sourceTree = "<group>"; };
+		DE0806662294FD8F008EAD18 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		DE0806682294FD8F008EAD18 /* rplidar_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rplidar_protocol.h; sourceTree = "<group>"; };
+		DE0806692294FD8F008EAD18 /* rptypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rptypes.h; sourceTree = "<group>"; };
+		DE08066A2294FD8F008EAD18 /* rplidar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rplidar.h; sourceTree = "<group>"; };
+		DE08066B2294FD8F008EAD18 /* rplidar_cmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rplidar_cmd.h; sourceTree = "<group>"; };
+		DE08066C2294FD8F008EAD18 /* rplidar_driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rplidar_driver.h; sourceTree = "<group>"; };
+		DE08066F2294FD8F008EAD18 /* thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
+		DE0806702294FD8F008EAD18 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		DE0806712294FD8F008EAD18 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		DE0806722294FD8F008EAD18 /* byteops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byteops.h; sourceTree = "<group>"; };
+		DE0806732294FD8F008EAD18 /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
+		DE0806742294FD8F008EAD18 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		DE0806752294FD8F008EAD18 /* locker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locker.h; sourceTree = "<group>"; };
+		DE0806762294FD8F008EAD18 /* abs_rxtx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abs_rxtx.h; sourceTree = "<group>"; };
+		DE0806772294FD8F008EAD18 /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assert.h; sourceTree = "<group>"; };
+		DE0806782294FD8F008EAD18 /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
+		DE0806792294FD8F008EAD18 /* rplidar_driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rplidar_driver.cpp; sourceTree = "<group>"; };
+		DE08067A2294FD8F008EAD18 /* rplidar_driver_TCP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rplidar_driver_TCP.h; sourceTree = "<group>"; };
+		DE08067D2294FD8F008EAD18 /* net_serial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_serial.h; sourceTree = "<group>"; };
+		DE08067E2294FD8F008EAD18 /* net_socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = net_socket.cpp; sourceTree = "<group>"; };
+		DE08067F2294FD8F008EAD18 /* timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
+		DE0806802294FD8F008EAD18 /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
+		DE0806812294FD8F008EAD18 /* net_serial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = net_serial.cpp; sourceTree = "<group>"; };
+		DE0806822294FD8F008EAD18 /* thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = thread.hpp; sourceTree = "<group>"; };
+		DE0806832294FD8F008EAD18 /* arch_macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arch_macOS.h; sourceTree = "<group>"; };
+		DE0806942294FD8F008EAD18 /* rplidar_driver_serial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rplidar_driver_serial.h; sourceTree = "<group>"; };
+		DE0806952294FD8F008EAD18 /* rplidar_driver_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rplidar_driver_impl.h; sourceTree = "<group>"; };
+		DE0806962294FD8F008EAD18 /* sdkcommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkcommon.h; sourceTree = "<group>"; };
+		DE0806972294FD8F008EAD18 /* cross_compile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = cross_compile.sh; sourceTree = "<group>"; };
+		E23329D61DF092AD0002B4FE /* TDSlamtec.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDSlamtec.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23329D91DF092AD0002B4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		E23329DF1DF092C90002B4FE /* CHOP_CPlusPlusBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOP_CPlusPlusBase.h; sourceTree = SOURCE_ROOT; };
+		E23329E01DF092C90002B4FE /* CPlusPlus_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPlusPlus_Common.h; sourceTree = SOURCE_ROOT; };
+		E23329E11DF092C90002B4FE /* TDSlamtec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TDSlamtec.cpp; sourceTree = SOURCE_ROOT; };
+		E23329E21DF092C90002B4FE /* TDSlamtec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSlamtec.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E23329D31DF092AD0002B4FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE08060A2294FD8F008EAD18 /* rplidar_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				DE08060B2294FD8F008EAD18 /* tools */,
+				DE08060E2294FD8F008EAD18 /* LICENSE */,
+				DE08060F2294FD8F008EAD18 /* docs */,
+				DE0806162294FD8F008EAD18 /* README.md */,
+				DE0806172294FD8F008EAD18 /* .gitignore */,
+				DE0806182294FD8F008EAD18 /* sdk */,
+			);
+			path = rplidar_sdk;
+			sourceTree = "<group>";
+		};
+		DE08060B2294FD8F008EAD18 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				DE08060C2294FD8F008EAD18 /* cp2102_driver */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		DE08060C2294FD8F008EAD18 /* cp2102_driver */ = {
+			isa = PBXGroup;
+			children = (
+				DE08060D2294FD8F008EAD18 /* CP210x_Windows_Drivers.zip */,
+			);
+			path = cp2102_driver;
+			sourceTree = "<group>";
+		};
+		DE08060F2294FD8F008EAD18 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				DE0806102294FD8F008EAD18 /* ReleaseNote.v1.8.1.md */,
+				DE0806112294FD8F008EAD18 /* ReleaseNote.v1.9.0.md */,
+				DE0806122294FD8F008EAD18 /* ReleaseNote.v1.8.0.md */,
+				DE0806132294FD8F008EAD18 /* ReleaseNote.v1.9.1.md */,
+				DE0806142294FD8F008EAD18 /* ReleaseNote.v1.11.0.md */,
+				DE0806152294FD8F008EAD18 /* ReleaseNote.v1.10.0.md */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		DE0806182294FD8F008EAD18 /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				DE0806532294FD8F008EAD18 /* Makefile */,
+				DE0806542294FD8F008EAD18 /* mak_def.inc */,
+				DE0806552294FD8F008EAD18 /* mak_common.inc */,
+				DE0806652294FD8F008EAD18 /* sdk */,
+				DE0806972294FD8F008EAD18 /* cross_compile.sh */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		DE0806652294FD8F008EAD18 /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				DE0806662294FD8F008EAD18 /* Makefile */,
+				DE0806672294FD8F008EAD18 /* include */,
+				DE08066D2294FD8F008EAD18 /* src */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		DE0806672294FD8F008EAD18 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DE0806682294FD8F008EAD18 /* rplidar_protocol.h */,
+				DE0806692294FD8F008EAD18 /* rptypes.h */,
+				DE08066A2294FD8F008EAD18 /* rplidar.h */,
+				DE08066B2294FD8F008EAD18 /* rplidar_cmd.h */,
+				DE08066C2294FD8F008EAD18 /* rplidar_driver.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		DE08066D2294FD8F008EAD18 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DE08066E2294FD8F008EAD18 /* hal */,
+				DE0806792294FD8F008EAD18 /* rplidar_driver.cpp */,
+				DE08067A2294FD8F008EAD18 /* rplidar_driver_TCP.h */,
+				DE08067B2294FD8F008EAD18 /* arch */,
+				DE0806942294FD8F008EAD18 /* rplidar_driver_serial.h */,
+				DE0806952294FD8F008EAD18 /* rplidar_driver_impl.h */,
+				DE0806962294FD8F008EAD18 /* sdkcommon.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DE08066E2294FD8F008EAD18 /* hal */ = {
+			isa = PBXGroup;
+			children = (
+				DE08066F2294FD8F008EAD18 /* thread.cpp */,
+				DE0806702294FD8F008EAD18 /* event.h */,
+				DE0806712294FD8F008EAD18 /* types.h */,
+				DE0806722294FD8F008EAD18 /* byteops.h */,
+				DE0806732294FD8F008EAD18 /* thread.h */,
+				DE0806742294FD8F008EAD18 /* util.h */,
+				DE0806752294FD8F008EAD18 /* locker.h */,
+				DE0806762294FD8F008EAD18 /* abs_rxtx.h */,
+				DE0806772294FD8F008EAD18 /* assert.h */,
+				DE0806782294FD8F008EAD18 /* socket.h */,
+			);
+			path = hal;
+			sourceTree = "<group>";
+		};
+		DE08067B2294FD8F008EAD18 /* arch */ = {
+			isa = PBXGroup;
+			children = (
+				DE08067C2294FD8F008EAD18 /* macOS */,
+			);
+			path = arch;
+			sourceTree = "<group>";
+		};
+		DE08067C2294FD8F008EAD18 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE08067D2294FD8F008EAD18 /* net_serial.h */,
+				DE08067E2294FD8F008EAD18 /* net_socket.cpp */,
+				DE08067F2294FD8F008EAD18 /* timer.cpp */,
+				DE0806802294FD8F008EAD18 /* timer.h */,
+				DE0806812294FD8F008EAD18 /* net_serial.cpp */,
+				DE0806822294FD8F008EAD18 /* thread.hpp */,
+				DE0806832294FD8F008EAD18 /* arch_macOS.h */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		DE67028622724BE300930753 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE08060A2294FD8F008EAD18 /* rplidar_sdk */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E23329CD1DF092AD0002B4FE = {
+			isa = PBXGroup;
+			children = (
+				E23329F11DF1D64A0002B4FE /* CHOP */,
+				E23329D71DF092AD0002B4FE /* Products */,
+				DE67028622724BE300930753 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E23329D71DF092AD0002B4FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E23329D61DF092AD0002B4FE /* TDSlamtec.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E23329F11DF1D64A0002B4FE /* CHOP */ = {
+			isa = PBXGroup;
+			children = (
+				E23329DF1DF092C90002B4FE /* CHOP_CPlusPlusBase.h */,
+				E23329E01DF092C90002B4FE /* CPlusPlus_Common.h */,
+				E23329E11DF092C90002B4FE /* TDSlamtec.cpp */,
+				E23329E21DF092C90002B4FE /* TDSlamtec.h */,
+				E23329D91DF092AD0002B4FE /* Info.plist */,
+			);
+			name = CHOP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E23329D51DF092AD0002B4FE /* TDSlamtec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E23329DC1DF092AD0002B4FE /* Build configuration list for PBXNativeTarget "TDSlamtec" */;
+			buildPhases = (
+				E23329D21DF092AD0002B4FE /* Sources */,
+				E23329D31DF092AD0002B4FE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDSlamtec;
+			productName = CPlusPlusCHOPExample;
+			productReference = E23329D61DF092AD0002B4FE /* TDSlamtec.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E23329CE1DF092AD0002B4FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Derivative;
+				TargetAttributes = {
+					E23329D51DF092AD0002B4FE = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E23329D11DF092AD0002B4FE /* Build configuration list for PBXProject "TDSlamtec" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = E23329CD1DF092AD0002B4FE;
+			productRefGroup = E23329D71DF092AD0002B4FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E23329D51DF092AD0002B4FE /* TDSlamtec */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E23329D21DF092AD0002B4FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE08076222951385008EAD18 /* net_socket.cpp in Sources */,
+				DE08076322951388008EAD18 /* timer.cpp in Sources */,
+				DE0807642295138A008EAD18 /* net_serial.cpp in Sources */,
+				DE08076122951356008EAD18 /* thread.cpp in Sources */,
+				DE08076022950467008EAD18 /* rplidar_driver.cpp in Sources */,
+				DE08075F2294FFB1008EAD18 /* TDSlamtec.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E23329DA1DF092AD0002B4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E23329DB1DF092AD0002B4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E23329DD1DF092AD0002B4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_MACOS=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					rplidar_sdk/sdk/sdk/include,
+					rplidar_sdk/sdk/sdk/src,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INSTALL_PATH = /;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.derivative.cpp.CPlusPlusCHOPExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		E23329DE1DF092AD0002B4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					rplidar_sdk/sdk/sdk/include,
+					rplidar_sdk/sdk/sdk/src,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INSTALL_PATH = /;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.derivative.cpp.CPlusPlusCHOPExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E23329D11DF092AD0002B4FE /* Build configuration list for PBXProject "TDSlamtec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E23329DA1DF092AD0002B4FE /* Debug */,
+				E23329DB1DF092AD0002B4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E23329DC1DF092AD0002B4FE /* Build configuration list for PBXNativeTarget "TDSlamtec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E23329DD1DF092AD0002B4FE /* Debug */,
+				E23329DE1DF092AD0002B4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E23329CE1DF092AD0002B4FE /* Project object */;
+}

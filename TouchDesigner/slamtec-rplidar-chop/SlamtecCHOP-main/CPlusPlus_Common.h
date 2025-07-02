@@ -1,19 +1,28 @@
-/* Shared Use License: This file is owned by Derivative Inc. (Derivative)
-* and can only be used, and/or modified for use, in conjunction with
+/* Shared Use License: This file is owned by Derivative Inc. (Derivative) and
+* can only be used, and/or modified for use, in conjunction with
 * Derivative's TouchDesigner software, and only if you are a licensee who has
-* accepted Derivative's TouchDesigner license or assignment agreement
-* (which also govern the use of this file). You may share or redistribute
-* a modified version of this file provided the following conditions are met:
+* accepted Derivative's TouchDesigner license or assignment agreement (which
+* also govern the use of this file).  You may share a modified version of this
+* file with another authorized licensee of Derivative's TouchDesigner software.
+* Otherwise, no redistribution or sharing of this file, with or without
+* modification, is permitted.
+*/
+
+/*
+* Produced by:
 *
-* 1. The shared file or redistribution must retain the information set out
-* above and this list of conditions.
-* 2. Derivative's name (Derivative Inc.) or its trademarks may not be used
-* to endorse or promote products derived from this file without specific
-* prior written permission from Derivative.
+* 				Derivative Inc
+*				401 Richmond Street West, Unit 386
+*				Toronto, Ontario
+*				Canada   M5V 3A8
+*				416-591-3555
+*
+* NAME:				CPlusPlus_Common.h
+*
 */
 
 /*******
-Derivative Developers: Make sure the virtual function order
+Derivative Developers:: Make sure the virtual function order
 stays the same, otherwise changes won't be backwards compatible
 ********/
 
@@ -22,7 +31,7 @@ stays the same, otherwise changes won't be backwards compatible
 #define __CPlusPlus_Common
 
 
-#ifdef _WIN32
+#ifdef WIN32
 	#define NOMINMAX
 	#include <windows.h>
 	#include <stdint.h>
@@ -37,11 +46,6 @@ stays the same, otherwise changes won't be backwards compatible
 #include <cmath>
 #include <float.h>
 
-#ifndef PyObject_HEAD
-	struct _object;
-	typedef _object PyObject;
-#endif
-
 struct cudaArray;
 
 enum class OP_CPUMemPixelType : int32_t
@@ -53,19 +57,13 @@ enum class OP_CPUMemPixelType : int32_t
 	// 32-bit float per color, RGBA pixels
 	RGBA32Float,
 
-	// A few single and two channel versions of the above
+	// Single and double channel options
+	// Fixed
 	R8Fixed,
 	RG8Fixed,
+	// Float
 	R32Float,
 	RG32Float,
-
-	R16Fixed = 100,
-	RG16Fixed,
-	RGBA16Fixed,
-
-	R16Float = 200,
-	RG16Float,
-	RGBA16Float,
 };
 
 class OP_String;
@@ -86,7 +84,7 @@ public:
 	// Spaces are not allowed
 	OP_String*		opType;
 
-	// The english readable label for the node. This is what is shown in the 
+	// The english readable label for the node. This is what is show in the 
 	// OP Create Menu dialog.
 	// Spaces and other special characters are allowed.
 	// This can be a UTF-8 encoded string for non-english langauge label
@@ -126,43 +124,31 @@ public:
 	// the majorVersion is the same.
 	int32_t			minorVersion = 1;
 
-	// If this Custom OP is using CPython objects (PyObject* etc.) obtained via
-	// getParPython() calls, this needs to be set to the Python
-	// version this plugin is compiled against.
-	// 
-	// This ensures when TD's Python version is upgraded the plugins will
-	// error cleanly. This should be set to PY_VERSION as defined in
-	// patchlevel.h from the Python include folder. (E.g, "3.5.1")
-	// It should be left unchanged if CPython isn't being used in this plugin.
-	OP_String*		pythonVersion;
-
-	int32_t			reserved[98];
+	int32_t			reserved[100];
 };
 
 
 class OP_NodeInfo
 {
 public:
-
 	// The full path to the operator
+
 	const char*		opPath;
 
 	// A unique ID representing the operator, no two operators will ever
 	// have the same ID in a single TouchDesigner instance.
+
 	uint32_t		opId;
 
 	// This is the handle to the main TouchDesigner window.
 	// It's possible this will be 0 the first few times the operator cooks,
 	// incase it cooks while TouchDesigner is still loading up
-#ifdef _WIN32
+
+#ifdef WIN32
 	HWND			mainWindowHandle;
 #endif
 
-	// The path to where the plugin's binary is located on this machine.
-	// UTF8-8 encoded.
-	const char*		pluginPath;
-
-	int32_t			reserved[17];
+	int32_t			reserved[19];
 };
 
 
@@ -404,7 +390,7 @@ public:
 
 	// non-inplace operations:
 	inline Vector
-	operator*(const float scalar) const
+	operator*(const float scalar)
 	{
 		Vector temp(*this);
 		temp.x *= scalar;
@@ -414,7 +400,7 @@ public:
 	}
 
 	inline Vector
-	operator/(const float scalar) const
+	operator/(const float scalar)
 	{
 		Vector temp(*this);
 		temp.x /= scalar;
@@ -424,7 +410,7 @@ public:
 	}
 
 	inline Vector
-	operator-(const Vector& trans) const
+	operator-(const Vector& trans)
 	{
 		Vector temp(*this);
 		temp.x -= trans.x;
@@ -434,7 +420,7 @@ public:
 	}
 
 	inline Vector
-	operator+(const Vector& trans) const
+	operator+(const Vector& trans)
 	{
 		Vector temp(*this);
 		temp.x += trans.x;
@@ -451,7 +437,7 @@ public:
 	}
 
 	inline float
-	length() const
+	length()
 	{
 		return sqrtf(dot(*this));
 	}
@@ -524,7 +510,7 @@ public:
 	}
 
 	// non-inplace operators
-	inline Position operator*(const float scalar) const
+	inline Position operator*(const float scalar)
 	{
 		Position temp(*this);
 		temp.x *= scalar;
@@ -533,7 +519,7 @@ public:
 		return temp;
 	}
 
-	inline Position operator/(const float scalar) const
+	inline Position operator/(const float scalar)
 	{
 		Position temp(*this);
 		temp.x /= scalar;
@@ -542,7 +528,7 @@ public:
 		return temp;
 	}
 
-	inline Position operator+(const Vector& trans) const
+	inline Position operator+(const Vector& trans)
 	{
 		Position temp(*this);
 		temp.x += trans.x;
@@ -551,7 +537,7 @@ public:
 		return temp;
 	}
 
-	inline Position operator-(const Vector& trans) const
+	inline Position operator-(const Vector& trans)
 	{
 		Position temp(*this);
 		temp.x -= trans.x;
@@ -705,9 +691,9 @@ public:
 	{
 		if (!pos)
 			return false;
-		pos->x = (minX + maxX) / 2.0f;
-		pos->y = (minY + maxY) / 2.0f;
-		pos->z = (minZ + maxZ) / 2.0f;
+		pos->x = (minX + maxX) / 2.0;
+		pos->y = (minY + maxY) / 2.0;
+		pos->z = (minZ + maxZ) / 2.0;
 		return true;
 	}
 
@@ -803,7 +789,7 @@ public:
 		attribType = AttribType::Float;
 	}
 
-	SOP_CustomAttribInfo(const char* n, int32_t numComp, AttribType type)
+	SOP_CustomAttribInfo(const char* n, int32_t numComp, const AttribType& type)
 	{
 		name = n;
 		numComponents = numComp;
@@ -824,13 +810,18 @@ public:
 
 	SOP_CustomAttribData()
 	{
+		name = nullptr;
+		numComponents = 0;
+		attribType = AttribType::Float;
 		floatData = nullptr;
 		intData = nullptr;
 	}
 
-	SOP_CustomAttribData(const char* n, int32_t numComp, AttribType type) :
-		SOP_CustomAttribInfo(n, numComp, type)
+	SOP_CustomAttribData(const char* n, int32_t numComp, const AttribType& type)
 	{
+		name = n;
+		numComponents = numComp;
+		attribType = type;
 		floatData = nullptr;
 		intData = nullptr;
 	}
@@ -999,45 +990,6 @@ public:
 
 };
 
-class OP_TimeInfo
-{
-public:
-
-	// same as global Python value absTime.frame. Counts up forever
-	// since the application started. In rootFPS units.
-	int64_t	absFrame;
-
-	// The timeline frame number for this cook
-	double	frame;
-
-	// The timeline FPS/rate this node is cooking at.
-	// If the component this node is located in has Component Time, it's FPS
-	// may be different than the Root FPS
-	double	rate;
-
-	// The frame number for the root timeline. Different than frame
-	// if the node is in a component that has component time.
-	double 	rootFrame;
-
-	// The Root FPS/Rate the file is running at.
-	double	rootRate;
-
-	// The number of frames that have elapsed since the last cook occured.
-	// This can be more than one if frames were dropped.
-	// If this is the first time this node is cooking, this will be 0.0
-	// This is in 'rate' units, not 'rootRate' units.
-	double	deltaFrames;
-
-	// The number of milliseconds that have elapsed since the last cook.
-	// Note that this isn't done via CPU timers, but is instead 
-	// simply deltaFrames * milliSecondsPerFrame
-	double	deltaMS;
-
-
-
-	int32_t	reserved[40];
-};
-
 
 class OP_Inputs
 {
@@ -1046,17 +998,13 @@ public:
 	// be called inside a beginGLCommands()/endGLCommands() section
 	// as they may require GL themselves to complete execution.
 
-	// Inputs that are wired into the node. Note that since some inputs
-	// may not be connected this number doesn't mean that that the first N
-	// inputs are connected. For example on a 3 input node if the 3rd input
-	// is only one connected, this will return 1, and getInput*(0) and (1)
-	// will return nullptr.
+	// these are wired into the node
 	virtual int32_t		getNumInputs() const = 0;
 
-	// Will return nullptr when the input has nothing connected to it.
+	// may return nullptr when invalid input
 	// only valid for C++ TOP operators
 	virtual const OP_TOPInput*		getInputTOP(int32_t index) const = 0;
-	// Only valid for C++ CHOP operators
+	// only valid for C++ CHOP operators
 	virtual const OP_CHOPInput*		getInputCHOP(int32_t index) const = 0;
 	// getInputSOP() declared later on in the class
 	// getInputDAT() declared later on in the class
@@ -1142,19 +1090,6 @@ public:
 
 	// only valid for C++ DAT operators
 	virtual const OP_DATInput*		getInputDAT(int32_t index) const = 0;
-
-	// To use Python in your Plugin you need to fill the
-	// customOPInfo.pythonVersion member in Fill*PluginInfo.
-	//
-	// The returned object, if not null should have its reference count decremented
-	// or else a memorky leak will occur.
-	virtual PyObject*				getParPython(const char* name) const = 0;
-
-
-	// Returns a class whose members gives you information about timing
-	// such as FPS and delta-time since the last cook.
-	// See OP_TimeInfo for more information
-	virtual const OP_TimeInfo*		getTimeInfo() const = 0;
 
 };
 
@@ -1330,10 +1265,6 @@ public:
 
 	virtual OP_ParAppendResult		appendSOP(const OP_StringParameter &sp) = 0;
 
-	// To use Python in your Plugin you need to fill the
-	// customOPInfo.pythonVersion member in Fill*PluginInfo.
-	virtual OP_ParAppendResult		appendPython(const OP_StringParameter &sp) = 0;
-
 
 };
 
@@ -1350,11 +1281,11 @@ static_assert(sizeof(OP_CustomOPInfo) == 456, "Incorrect Size");
 
 static_assert(offsetof(OP_NodeInfo, opPath) == 0, "Incorrect Alignment");
 static_assert(offsetof(OP_NodeInfo, opId) == 8, "Incorrect Alignment");
-#ifdef _WIN32
+#ifdef WIN32
 	static_assert(offsetof(OP_NodeInfo, mainWindowHandle) == 16, "Incorrect Alignment");
 	static_assert(sizeof(OP_NodeInfo) == 104, "Incorrect Size");
 #else
-	static_assert(sizeof(OP_NodeInfo) == 96, "Incorrect Size");
+	static_assert(sizeof(OP_NodeInfo) == 88, "Incorrect Size");
 #endif
 
 static_assert(offsetof(OP_DATInput, opPath) == 0, "Incorrect Alignment");
@@ -1482,5 +1413,4 @@ static_assert(offsetof(OP_StringParameter, label) == 8, "Incorrect Alignment");
 static_assert(offsetof(OP_StringParameter, page) == 16, "Incorrect Alignment");
 static_assert(offsetof(OP_StringParameter, defaultValue) == 24, "Incorrect Alignment");
 static_assert(sizeof(OP_StringParameter) == 112, "Incorrect Size");
-static_assert(sizeof(OP_TimeInfo) == 216, "Incorrect Size");
 #endif
